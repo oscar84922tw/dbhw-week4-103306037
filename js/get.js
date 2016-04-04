@@ -1,11 +1,14 @@
 /*
  * @Author: oscar
  * @Date:   2016-04-04 01:03:00
- * @Last Modified by:   oscar
- * @Last Modified time: 2016-04-04 10:48:06
+ * @Last Modified by:   oscar84922tw
+ * @Last Modified time: 2016-04-04 13:20:24
  */
 
 'use strict';
+
+
+
 
 function loadXMLDoc() {
     if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
@@ -15,11 +18,32 @@ function loadXMLDoc() {
     }
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
-            console.log(xmlhttp.responseText);
+           // var consultJson = JSON.parse(xmlhttp.responseText);
+            // for(var i = 0;i<consultJson.)
+            var data = xmlhttp.responseText;
+            document.getElementById("myDiv").innerHTML = data ;
 
+            // for (var i = 0; i <= JSON.parse(data).length; i--) {
+            //     0[i]
+            // }
+            // console.log(consultJson);
+            // drawTable(JSON.parse(xmlhttp.responseText));
           }
     }
-    xmlhttp.open("POST", "http://data.taipei/opendata/datalist/datasetMeta/preview?id=58093ba6-4c98-4148-b27a-50ad97d7afca&rid=6f4e0b9b-8cb1-4b1d-a5c4-febd90f62469", true);
+    xmlhttp.open("GET", "http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=5aacba65-afda-4ad5-88f5-6026934140e6", true);
     xmlhttp.send();
 }
+
+function drawTable(data) {
+    for (var i = 0; i < data.length; i++) {
+        drawRow(data[i]);
+    }
+}
+
+function drawRow(rowData) {
+    var row = $("<tr />")
+    $("#personDataTable").append(row); //this will append tr element to table... keep its reference for a while since we will add cels into it
+    row.append($("<td>" + rowData.SectionName + "</td>"));
+    row.append($("<td>" + rowData.AvgSpd + "</td>"));
+}
+

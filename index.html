@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>DBMS HW4</title>
+        <link rel="stylesheet" type="text/css" href="css/init.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/get.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 test1">2016</div>
+                <div class="col-md-4 test2">你好</div>
+            </div>
+            <button type="button" onclick="loadXMLDoc()">Get Data</button>
+            <div id="myDiv"></div>
+            <table id="personDataTable">
+                <tr>
 
-<head>
-    <meta charset="utf-8">
-    <title>DBMS HW4</title>
-    <link rel="stylesheet" type="text/css" href="css/init.css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/get.js"></script>
-</head>
+                    <th>方向/地點</th>
+                    <th>平均速度</th>
+                </tr>
 
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 test1">2016</div>
-            <div class="col-md-4 test2">你好</div>
+            </table>
+
         </div>
-        <button type="button" onclick="loadXMLDoc()">请求数据</button>
-        <div id="myDiv"></div>
-    </div>
-</body>
-
+    </body>
 </html>
