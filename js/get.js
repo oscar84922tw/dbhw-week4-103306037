@@ -2,11 +2,10 @@
  * @Author: oscar
  * @Date:   2016-04-04 01:03:00
  * @Last Modified by:   oscar84922tw
- * @Last Modified time: 2016-04-04 13:20:24
+ * @Last Modified time: 2016-04-04 13:45:31
  */
 
 'use strict';
-
 
 
 
@@ -18,20 +17,26 @@ function loadXMLDoc() {
     }
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-           // var consultJson = JSON.parse(xmlhttp.responseText);
+            // var consultJson = JSON.parse(xmlhttp.responseText);
             // for(var i = 0;i<consultJson.)
             var data = xmlhttp.responseText;
-            document.getElementById("myDiv").innerHTML = data ;
-
+            // var dataarr = $.parseJSON(data)
+            // document.getElementById("myDiv").innerHTML = dataarr[0];
+            console.log(jsonToMap(data));
+            // var arr = $.map(obj, function(el) { return el });
             // for (var i = 0; i <= JSON.parse(data).length; i--) {
             //     0[i]
             // }
             // console.log(consultJson);
             // drawTable(JSON.parse(xmlhttp.responseText));
-          }
+        }
     }
     xmlhttp.open("GET", "http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=5aacba65-afda-4ad5-88f5-6026934140e6", true);
     xmlhttp.send();
+}
+
+function jsonToMap(jsonStr) {
+    return new Map(JSON.parse(jsonStr));
 }
 
 function drawTable(data) {
@@ -46,4 +51,3 @@ function drawRow(rowData) {
     row.append($("<td>" + rowData.SectionName + "</td>"));
     row.append($("<td>" + rowData.AvgSpd + "</td>"));
 }
-
