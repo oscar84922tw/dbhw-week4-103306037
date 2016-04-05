@@ -2,10 +2,10 @@
 * @Author: oscar
 * @Date:   2016-04-03 23:50:49
 * @Last Modified by:   oscar84922tw
-* @Last Modified time: 2016-04-05 23:47:09
+* @Last Modified time: 2016-04-05 23:53:17
 */
 .title{
-  background-color: #fff;
+background-color: #fff;
 }
 .circle {
 background-color: rgba(170,170,170,0);
@@ -25,7 +25,6 @@ position: absolute;
 -moz-animation: spinPulse 1s infinite ease-in-out;
 -webkit-animation: spinPulse 1s infinite linear;
 }
-
 @-moz-keyframes spinPulse {
 0% {
 -moz-transform: rotate(160deg);
@@ -75,7 +74,6 @@ opacity: 0;
 #content{
 height: 50px;
 }
-
 .rwd-table {
 background: #fff;
 overflow: hidden;
