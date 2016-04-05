@@ -2,16 +2,80 @@
 * @Author: oscar
 * @Date:   2016-04-03 23:50:49
 * @Last Modified by:   oscar84922tw
-* @Last Modified time: 2016-04-05 21:49:33
+* @Last Modified time: 2016-04-05 23:47:09
 */
-
-.test1{
-background-color: #FF8800;
+.title{
+  background-color: #fff;
+}
+.circle {
+background-color: rgba(170,170,170,0);
+border: 5px solid rgba(148,0,0,0.9);
+opacity: .9;
+border-right: 5px solid rgba(170,170,170,0);
+border-left: 5px solid rgba(170,170,170,0);
+border-radius: 50px;
+box-shadow: 0 0 35px #2187e7;
+width: 50px;
+height: 50px;
+top: 50%;
+left:50%;
+z-index: 1;
+margin: 0 auto;
+position: absolute;
+-moz-animation: spinPulse 1s infinite ease-in-out;
+-webkit-animation: spinPulse 1s infinite linear;
 }
 
-.test2{
-background-color: #AA0000;
+@-moz-keyframes spinPulse {
+0% {
+-moz-transform: rotate(160deg);
+opacity: 0;
+box-shadow: 0 0 1px #EA0000;
 }
+50% {
+-moz-transform: rotate(145deg);
+opacity: 1;
+}
+100% {
+-moz-transform: rotate(-320deg);
+opacity: 0;
+};
+}
+@-moz-keyframes spinoffPulse {
+0% {
+-moz-transform: rotate(0deg);
+}
+100% {
+-moz-transform: rotate(360deg);
+};
+}
+@-webkit-keyframes spinPulse {
+0% {
+-webkit-transform: rotate(160deg);
+opacity: 0;
+box-shadow: 0 0 1px #EA0000;
+}
+50% {
+-webkit-transform: rotate(145deg);
+opacity: 1;
+}
+100% {
+-webkit-transform: rotate(-320deg);
+opacity: 0;
+};
+}
+@-webkit-keyframes spinoffPulse {
+0% {
+-webkit-transform: rotate(0deg);
+}
+100% {
+-webkit-transform: rotate(360deg);
+};
+}
+#content{
+height: 50px;
+}
+
 .rwd-table {
 background: #fff;
 overflow: hidden;
@@ -44,6 +108,7 @@ text-align: left;
 .rwd-table th, .rwd-table td:before {
 color: #D20B2A;
 font-weight: bold;
+text-align: center;
 }
 @media (min-width: 480px) {
 .rwd-table td:before {

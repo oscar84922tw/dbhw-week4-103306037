@@ -2,7 +2,7 @@
  * @Author: oscar
  * @Date:   2016-04-04 01:03:00
  * @Last Modified by:   oscar84922tw
- * @Last Modified time: 2016-04-05 22:34:17
+ * @Last Modified time: 2016-04-05 23:41:13
  */
 
 
@@ -18,7 +18,7 @@ function loadXMLDoc() {
                 var dataList = data.result.results;
                 // var WebdataList = datalist.map
                 var WebDataList = dataList.map(function(dataList) {
-                    var HTMLString = '<tr><td data-th="_id">' + dataList._id + '</td><td data-th="SectionId">' + dataList.SectionId +'</td><td data-th="SectionName">'+dataList.SectionName +'</td><td data-th="AvgSpd">'+dataList.AvgSpd+'</td><td data-th="AvgOcc">'+dataList.AvgOcc+'</td><td data-th="MOELevel">'+dataList.MOELevel+'</td><td data-th="StartWgsX">'+dataList.StartWgsX+'</td><td data-th="EndWgsX">'+dataList.EndWgsX+'</td><td data-th="StartWgsY">'+dataList.StartWgsY+'</td><td data-th="EndWgsY">'+dataList.EndWgsY+'</td></tr>';
+                    var HTMLString = '<tr></td><td data-th="SectionId">' + dataList.SectionId +'</td><td data-th="SectionName">'+dataList.SectionName +'</td><td data-th="AvgSpd">'+dataList.AvgSpd+'</td><td data-th="AvgOcc">'+dataList.AvgOcc+'</td><td data-th="StartWgsX">'+dataList.StartWgsX+'</td><td data-th="EndWgsX">'+dataList.EndWgsX+'</td><td data-th="StartWgsY">'+dataList.StartWgsY+'</td><td data-th="EndWgsY">'+dataList.EndWgsY+'</td></tr>';
                     var items = "";
                 //     <tr>
                 //     <td data-th="_id"></td>
@@ -41,8 +41,10 @@ function loadXMLDoc() {
                     return HTMLString;
                 });
                 WebDataList.forEach(function(html) {
-                    $(html).appendTo("#myDiv");
+                    $(html).appendTo("#dataTable");
                 });
+                $('.circle').hide();
+                $('.circle1').hide();
                 // if (dataList) {
                 //     $.each(dataList, function(i, item) {
                 //         console.log(Object.values(item));
