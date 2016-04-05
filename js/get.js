@@ -4,9 +4,7 @@
  * @Last Modified by:   oscar84922tw
  * @Last Modified time: 2016-04-05 23:51:41
  */
-$(document).ready(function() {
-loadXMLDoc();
-}
+
 function loadXMLDoc() {
     var resultdata = new Array();
     $.ajax({
