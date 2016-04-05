@@ -2,11 +2,10 @@
  * @Author: oscar
  * @Date:   2016-04-04 01:03:00
  * @Last Modified by:   oscar84922tw
- * @Last Modified time: 2016-04-05 23:56:08
+ * @Last Modified time: 2016-04-06 00:01:04
  */
-$(document).ready(function() {
-loadXMLDoc();
-}
+
+
 function loadXMLDoc() {
     var resultdata = new Array();
     $.ajax({
